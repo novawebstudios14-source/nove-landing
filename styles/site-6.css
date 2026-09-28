@@ -63,15 +63,15 @@
   .hero-photo-note{left:22px;right:76px;bottom:20px}
   .project-caption{padding:20px;background:linear-gradient(transparent,rgba(4,25,13,.45))}
   .real-projects .project-media img{transition:none}
-  /* The photograph leads the first screen directly below the header mark. */
+  /* Keep the branded introduction, then let the photograph lead the story. */
   .hero{display:flex;flex-direction:column;overflow:visible}
   .hero-copy{display:contents}
-  .hero-signature{display:none}
-  .hero-main{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-  .hero-image{order:0;margin-top:var(--header);height:clamp(470px,72svh,780px);min-height:0}
+  .hero-signature{display:block;order:0;margin:calc(var(--header) + 32px) var(--pad) 0}
+  .hero-main{position:static;order:1;align-self:stretch;width:auto;height:auto;margin:0;padding:clamp(60px,11vh,105px) var(--pad) 34px;overflow:visible;clip-path:none;white-space:normal}
+  .hero-image{order:2;margin-top:0;height:clamp(470px,72svh,780px);min-height:0}
   .hero-image img{object-position:center 45%}
   .hero-field{display:none}
-  .hero-bottom{order:1;display:grid;grid-template-columns:1fr;padding:22px var(--pad) 0;background:var(--paper);border:0;gap:0}
+  .hero-bottom{order:3;display:grid;grid-template-columns:1fr;padding:22px var(--pad) 0;background:var(--paper);border:0;gap:0}
   .hero-statement{max-width:30ch;padding:0 0 22px;font-size:clamp(20px,5vw,26px);line-height:1.3;color:var(--green)}
   .hero-cta{margin:0 calc(var(--pad) * -1);padding:18px var(--pad);border-top:1px solid var(--line);min-height:62px}
 }
