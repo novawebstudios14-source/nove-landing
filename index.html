@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="styles/site-4.css" />
   <link rel="stylesheet" href="styles/site-5.css" />
   <link rel="stylesheet" href="styles/site-6.css?v=mobile-photo-2" />
+  <link rel="stylesheet" href="styles/site-loader.css" />
   <style>
     /* Critical mobile hero: the photo must appear immediately below the header. */
     @media (max-width:820px) {
@@ -36,8 +37,14 @@
       .hero-bottom{order:1;display:grid;grid-template-columns:1fr;padding:22px 20px 0;background:#f8f6ef}
     }
   </style>
+  <script>document.documentElement.classList.add('has-js');</script>
 </head>
 <body>
+<div class="site-loader" id="siteLoader" role="status" aria-label="Carregando o site da NOVE" aria-live="polite">
+  <video id="siteLoaderVideo" autoplay muted playsinline preload="auto" aria-hidden="true">
+    <source src="assets/nove-logo-reveal.mp4" type="video/mp4" />
+  </video>
+</div>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <div class="header-sentinel" id="headerSentinel" aria-hidden="true"></div>
 
@@ -263,5 +270,6 @@
 <a class="mobile-cta" id="mobileCta" href="https://wa.me/5591993333032" target="_blank" rel="noopener"><span>Falar no WhatsApp</span><span class="arrow-mark" aria-hidden="true"></span></a>
 
 <script src="scripts/app.js" defer></script>
+<script src="scripts/loader.js" defer></script>
 </body>
 </html>
