@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#07371f" />
+  <title>Página não encontrada | NOVE</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <style>
+    :root{--green:#07371f;--field:#65b82e;--paper:#f8f6ef;--line:rgba(255,255,255,.2);--ease:cubic-bezier(.23,1,.32,1)}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--green);color:var(--paper);font-family:"Helvetica Neue","Arial Nova",Helvetica,Arial,sans-serif;min-height:100dvh;display:grid;grid-template-columns:1.2fr .8fr;-webkit-font-smoothing:antialiased}
+    main{padding:clamp(28px,5vw,74px);display:flex;flex-direction:column;justify-content:space-between}
+    .brand{font-size:32px;font-weight:780;letter-spacing:-.065em;line-height:1}.brand i{display:inline-block;width:.22em;height:.22em;background:var(--field);border-radius:50%;margin-left:.04em}
+    .error{max-width:760px;padding-block:70px}.code{font:10px/1.4 "SFMono-Regular",Consolas,monospace;letter-spacing:.16em;text-transform:uppercase;color:#b9c8be}.error h1{font-size:clamp(54px,8vw,112px);line-height:.88;letter-spacing:-.04em;margin:18px 0 24px;font-weight:620}.error p{max-width:55ch;color:#cad6ce;font-size:17px;line-height:1.65}.error a{margin-top:28px;display:inline-flex;align-items:center;gap:14px;color:inherit;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.55);padding-bottom:7px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;transition:gap 220ms var(--ease),transform 140ms var(--ease)}.error a:active{transform:scale(.98)}
+    .arrow{display:inline-block;width:18px;height:18px;position:relative}.arrow:before{content:"";position:absolute;width:12px;height:1px;background:currentColor;left:2px;top:9px;transform:rotate(-45deg)}.arrow:after{content:"";position:absolute;width:6px;height:6px;border-top:1px solid currentColor;border-right:1px solid currentColor;right:1px;top:2px}
+    .side{background:url('/https://raw.githubusercontent.com/vitamediabr-a11y/nove-site/main/assets/grass-closeup.webp') center/cover;position:relative;min-height:100%}.side:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,55,31,.04),rgba(7,55,31,.44))}.field{position:absolute;z-index:1;inset:17%;border:1px solid rgba(255,255,255,.27)}.field:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(255,255,255,.27)}.field:after{content:"";position:absolute;left:50%;top:50%;width:80px;height:80px;border:1px solid rgba(255,255,255,.27);border-radius:50%;transform:translate(-50%,-50%)}
+    :focus-visible{outline:2px solid var(--field);outline-offset:5px}::selection{background:var(--field);color:#092014}
+    @media(hover:hover) and (pointer:fine){.error a:hover{gap:19px}}
+    @media(max-width:760px){body{grid-template-columns:1fr}.side{min-height:34dvh;order:-1}.error{padding-block:52px}main{min-height:66dvh}}
+    @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+  </style>
+</head>
+<body>
+  <main>
+    <a href="/" class="brand" aria-label="NOVE, início">nove<i aria-hidden="true"></i></a>
+    <div class="error">
+      <div class="code">Erro 404</div>
+      <h1>Esta superfície não existe.</h1>
+      <p>O endereço pode ter mudado ou sido digitado incorretamente. Volte ao início para continuar pelas soluções da NOVE.</p>
+      <a href="/">Voltar para o início <span class="arrow" aria-hidden="true"></span></a>
+    </div>
+  </main>
+  <aside class="side" aria-hidden="true"><div class="field"></div></aside>
+</body>
+</html>

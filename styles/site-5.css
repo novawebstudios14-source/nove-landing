@@ -1,0 +1,115 @@
+@media (max-width:1100px){
+      .hero{grid-template-columns:1.34fr .82fr}
+      .hero-brand{font-size:clamp(92px,14vw,186px)}
+      .nav-links{gap:17px}
+      .header-meta .loc{display:none}
+      .solutions-shell{grid-template-columns:1fr .84fr}
+      .process-step{grid-template-columns:80px 1fr .6fr}
+    }
+
+    @media (max-width:820px){
+      :root{--header:66px;--pad:20px}
+      body{padding-bottom:0}
+      .nav-links,.header-meta{display:none}
+      .header-inner{grid-template-columns:1fr auto}
+      .menu-btn{display:flex}
+      .hero{display:block;min-height:auto}
+      .hero-copy{min-height:72dvh;padding-top:calc(var(--header) + 34px);grid-template-rows:auto 1fr auto}
+      .hero-main{padding:48px 0 32px}
+      .hero-brand{font-size:clamp(88px,28vw,160px)}
+      .hero-subbrand{font-size:11px;letter-spacing:.18em}
+      .hero-bottom{grid-template-columns:1fr}
+      .hero-statement{padding-bottom:20px}
+      .hero-cta{margin:0 calc(var(--pad) * -1);padding:20px var(--pad);border-left:0;border-top:1px solid var(--line)}
+      .hero-image{height:54dvh;min-height:420px}
+      .hero-field{inset:16% 12%}
+      .intro-grid,.solutions-shell,.manifesto-end,.arena-layout,.contact-top{grid-template-columns:1fr}
+      .intro-aside{position:relative;top:auto;max-width:360px}
+      .intro-title{font-size:clamp(48px,15vw,82px)}
+      .intro-body{grid-template-columns:1fr}
+      .solution-visual{position:relative;top:auto;min-height:430px;height:56dvh;order:-1}
+      .solution-row{padding:24px 0}
+      .solution-row p{display:block}
+      .manifesto-word{font-size:clamp(52px,16vw,88px)}
+      .manifesto-end p{justify-self:start}
+      .projects-stage{grid-template-columns:1fr;grid-template-rows:420px 230px 300px}
+      .project-media.main{grid-row:auto}
+      .compare-box{height:60dvh;min-height:430px}
+      .compare-meta{grid-template-columns:1fr 1fr}
+      .compare-meta .note{grid-column:1/-1;grid-row:2;text-align:left}
+      .arena-sticky{position:relative;top:auto}
+      .arena-art{max-width:560px}
+      .arena-steps{margin-top:60px}
+      .process-step{grid-template-columns:62px 1fr}
+      .process-step .result{grid-column:2;justify-self:start;max-width:420px;padding-top:0}
+      .process-step:nth-child(even) h3{transform:none}
+      .brief-form{grid-template-columns:1fr 1fr}
+      .field:nth-child(2){border-right:0}
+      .field:nth-child(n+3){border-top:1px solid var(--line-light)}
+      .footer-grid{grid-template-columns:1fr 1fr}
+      .footer-brand{grid-column:1/-1}
+      .floating-cta{display:grid;right:14px;bottom:max(14px,env(safe-area-inset-bottom));width:50px;height:50px}
+      .mobile-cta{display:none!important}
+    }
+
+    @media (max-width:520px){
+      .hero-signature{font-size:9px}
+      .hero-copy{min-height:69dvh}
+      .hero-image{height:50dvh;min-height:380px}
+      .display{font-size:clamp(44px,14vw,68px)}
+      .solutions{padding-top:92px}
+      .solution-visual{min-height:390px;height:50dvh}
+      .solution-row h3{font-size:31px}
+      .projects-stage{grid-template-rows:390px 210px 300px}
+      .portfolio-state{padding:24px}
+      .compare-box{min-height:390px;height:54dvh}
+      .arena-steps{padding-left:26px}
+      .arena-step{grid-template-columns:44px 1fr;gap:15px}
+      .arena-step:before{left:-24px}
+      .process-step{grid-template-columns:44px 1fr;gap:16px}
+      .brief-form{grid-template-columns:1fr}
+      .field{border-right:0!important;border-top:1px solid var(--line-light)}
+      .field:first-child{border-top:0}
+      .footer-grid{grid-template-columns:1fr}
+      .footer-brand{grid-column:auto}
+      .footer-bottom{display:block}
+      .footer-bottom span{display:block;margin-top:8px}
+      .floating-cta{right:12px;bottom:max(12px,env(safe-area-inset-bottom));width:48px;height:48px}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*:before,*:after{animation-duration:.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}
+      .intro-title span{clip-path:inset(0)!important;transform:none!important;opacity:1!important;transition:none!important}
+      .manifesto-word{color:#fff!important;transform:none!important;transition:color 120ms linear!important}
+      .solution-visual img,.mobile-menu{transition:opacity 120ms linear!important;transform:none!important}
+    }
+
+/* Real NOVE work: replaces placeholder portfolio with verified project imagery */
+.projects-stage.real-projects{grid-template-columns:1.34fr .66fr;grid-template-rows:294px 294px;gap:14px}
+.real-projects .project-media.main{grid-row:1/3}
+.real-projects .project-media img{filter:none;transform:none}
+.real-projects .project-media:after{background:linear-gradient(180deg,transparent 42%,rgba(4,25,13,.78))}
+.project-caption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:24px;color:#fff;display:grid;gap:5px}
+.project-caption span{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#c7d6cc;font-weight:700}
+.project-caption strong{font-size:clamp(21px,2.2vw,34px);line-height:1;letter-spacing:-.025em;font-weight:560}
+.project-caption small{font-size:11px;line-height:1.5;color:#dce4de;max-width:38ch}
+.projects-proof{margin:20px 0 0;max-width:760px;color:#68736b;font-size:12px;line-height:1.65}
+
+/* Verified before/after pair from Goianésia do Pará */
+.surface-base{background:url('https://raw.githubusercontent.com/vitamediabr-a11y/nove-site/main/https://raw.githubusercontent.com/vitamediabr-a11y/nove-site/main/assets/projects/goianesia-corredor-antes.webp') center/cover no-repeat}
+.surface-base:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.13))}
+.surface-after{background:url('https://raw.githubusercontent.com/vitamediabr-a11y/nove-site/main/https://raw.githubusercontent.com/vitamediabr-a11y/nove-site/main/assets/projects/goianesia-corredor-depois.webp') center/cover no-repeat;clip-path:inset(0 0 0 52%)}
+
+@media (max-width:820px){
+  .projects-stage.real-projects{grid-template-columns:1fr;grid-template-rows:360px 300px 300px}
+  .real-projects .project-media.main{grid-row:auto}
+  .project-caption{padding:20px}
+}
+
+@media (max-width:520px){
+  .projects-stage.real-projects{grid-template-rows:300px 270px 270px;gap:10px}
+  .project-caption{padding:17px}
+  .project-caption strong{font-size:23px}
+  .projects-proof{font-size:11px}
+}

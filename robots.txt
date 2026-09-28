@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://novawebstudios14-source.github.io/nove-landing/sitemap.xml
