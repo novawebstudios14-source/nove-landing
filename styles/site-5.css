@@ -97,9 +97,9 @@
 .projects-proof{margin:20px 0 0;max-width:760px;color:#68736b;font-size:12px;line-height:1.65}
 
 /* Verified before/after pair from Goianésia do Pará */
-.surface-base{background:url('https://raw.githubusercontent.com/vitamediabr-a11y/nove-site/main/https://raw.githubusercontent.com/vitamediabr-a11y/nove-site/main/assets/projects/goianesia-corredor-antes.webp') center/cover no-repeat}
+.surface-base{background:url('../assets/projects/goianesia-corredor-antes.webp') center/cover no-repeat}
 .surface-base:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.13))}
-.surface-after{background:url('https://raw.githubusercontent.com/vitamediabr-a11y/nove-site/main/https://raw.githubusercontent.com/vitamediabr-a11y/nove-site/main/assets/projects/goianesia-corredor-depois.webp') center/cover no-repeat;clip-path:inset(0 0 0 52%)}
+.surface-after{background:url('../assets/projects/goianesia-corredor-depois.webp') center/cover no-repeat;clip-path:inset(0 0 0 52%)}
 
 @media (max-width:820px){
   .projects-stage.real-projects{grid-template-columns:1fr;grid-template-rows:360px 300px 300px}

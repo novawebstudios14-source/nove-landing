@@ -10,7 +10,7 @@
     X-Frame-Options = "SAMEORIGIN"
 
 [[headers]]
-  for = "/https://raw.githubusercontent.com/vitamediabr-a11y/nove-site/main/assets/*"
+  for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 

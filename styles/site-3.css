@@ -27,7 +27,7 @@
     .surface-base,.surface-after{position:absolute;inset:0}
     .surface-base{background:radial-gradient(circle at 20% 30%,#a29275 0 3%,transparent 4%),radial-gradient(circle at 70% 60%,#776c57 0 2%,transparent 3%),linear-gradient(145deg,#9b8f78,#655f53)}
     .surface-base:after{content:"";position:absolute;inset:0;background-image:linear-gradient(100deg,rgba(255,255,255,.07),transparent 30%),repeating-linear-gradient(110deg,transparent 0 10px,rgba(0,0,0,.05) 11px 12px)}
-    .surface-after{background:url('https://raw.githubusercontent.com/vitamediabr-a11y/nove-site/main/https://raw.githubusercontent.com/vitamediabr-a11y/nove-site/main/assets/grass-closeup.webp') center/cover;clip-path:inset(0 0 0 52%)}
+    .surface-after{background:url('../assets/grass-closeup.webp') center/cover;clip-path:inset(0 0 0 52%)}
     .compare-overlay{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.12))}
     .compare-line{position:absolute;left:52%;top:0;bottom:0;width:1px;background:#fff;transform:translateX(-.5px);pointer-events:none}
     .compare-handle{position:absolute;left:52%;top:50%;width:56px;height:56px;border:1px solid rgba(255,255,255,.86);background:rgba(7,55,31,.78);backdrop-filter:blur(8px);transform:translate(-50%,-50%);display:grid;place-items:center;pointer-events:none}
