@@ -66,8 +66,8 @@
   /* Keep the branded introduction, then let the photograph lead the story. */
   .hero{display:flex;flex-direction:column;overflow:visible}
   .hero-copy{display:contents}
-  .hero-signature{display:block;order:0;margin:calc(var(--header) + 32px) var(--pad) 0}
-  .hero-main{position:static;order:1;align-self:stretch;width:auto;height:auto;margin:0;padding:clamp(60px,11vh,105px) var(--pad) 34px;overflow:visible;clip-path:none;white-space:normal}
+  .hero-signature{display:block;order:0;margin:calc(var(--header) + 26px) var(--pad) 0}
+  .hero-main{position:static;order:1;align-self:stretch;width:auto;height:auto;margin:0;padding:24px var(--pad) 28px;overflow:visible;clip-path:none;white-space:normal}
   .hero-image{order:2;margin-top:0;height:clamp(470px,72svh,780px);min-height:0}
   .hero-image img{object-position:center 45%}
   .hero-field{display:none}
