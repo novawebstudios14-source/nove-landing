@@ -16,7 +16,7 @@
     window.setTimeout(() => {
       video.pause();
       loader.remove();
-    }, 260);
+    }, 220);
   }
 
   if (reducedMotion || window.location.hash) {
@@ -27,8 +27,7 @@
   video.addEventListener('ended', finish, { once: true });
   video.addEventListener('error', finish, { once: true });
   video.querySelector('source')?.addEventListener('error', finish, { once: true });
-  video.playbackRate = 2.7;
-  timeout = window.setTimeout(finish, 3000);
+  timeout = window.setTimeout(finish, 2200);
   const started = video.play();
   if (started && typeof started.catch === 'function') started.catch(finish);
 })();
