@@ -60,6 +60,8 @@
       menuBtn.setAttribute('aria-expanded', String(open));
       menuBtn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
       mobileMenu.setAttribute('aria-hidden', String(!open));
+      header.classList.toggle('menu-active', open);
+      persistentCtas.forEach(el => el.toggleAttribute('inert', open));
       main.toggleAttribute('inert', open);
       footer.toggleAttribute('inert', open);
       if (open) {
@@ -72,6 +74,9 @@
     }
 
     menuBtn.addEventListener('click', (event) => toggleMenu(undefined, event.detail === 0));
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 820 && mobileMenu.classList.contains('open')) toggleMenu(false, true);
+    });
     mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => toggleMenu(false)));
     document.addEventListener('keydown', event => {
       if (event.key === 'Escape' && mobileMenu.classList.contains('open')) toggleMenu(false, true);
@@ -83,6 +88,19 @@
         else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
       }
     });
+
+    // Reveal only after this stylesheet is active; content remains visible without JS.
+    if (canObserve && !prefersReduced) {
+      const reveals = [...document.querySelectorAll('.solutions-header,.projects-header,.project-card,.compare-header,.arena-photo,.process-header,.contact-top')];
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-in-view');
+          observer.unobserve(entry.target);
+        });
+      }, { rootMargin: '0px 0px -6% 0px', threshold: .08 });
+      reveals.forEach(el => { el.classList.add('motion-reveal'); observer.observe(el); });
+    }
 
     const introLines = [...document.querySelectorAll('.intro-title span')];
     if (prefersReduced || !canObserve) {
