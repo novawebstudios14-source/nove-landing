@@ -19,3 +19,7 @@
 @media (prefers-reduced-motion:reduce){
   .solution-panel-cta,.solution-stage-cta{transition:none}
 }
+
+/* The transformation now follows the solutions. */
+.compare-header:before{content:"02  /  TRANSFORMAÇÃO"}
+.projects-header:before{content:"03  /  PROJETOS REAIS"}
