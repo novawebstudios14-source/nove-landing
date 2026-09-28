@@ -1,0 +1,21 @@
+/* Each solution reveals its own project photograph and direct WhatsApp action. */
+.solution-stage{display:contents}
+.solution-panel-cta{margin-top:20px;position:relative;z-index:4;min-height:52px;align-self:start;background:#b8d994;color:var(--green);border-color:#b8d994}
+.solution-panel-cta:after{background:var(--green);color:#fff}
+.solution-stage-media{display:none}
+@media (max-width:820px){
+  .solutions-shell{display:block}
+  .solutions-list{border-top:0}
+  .solution-stage{display:block;border-top:1px solid var(--line);padding-bottom:30px}
+  .solution-stage:last-child{border-bottom:1px solid var(--line)}
+  .solution-row,.solution-row[aria-selected="true"]{padding:23px 0 20px;border-bottom:0;color:var(--green)}
+  .solution-row .row-line{display:none}
+  .solution-stage-media{display:block;position:relative}
+  .solution-stage-media img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;filter:saturate(.9)}
+  .solution-stage-cta{display:flex;width:100%;min-height:62px;margin-top:0;justify-content:space-between}
+  .solution-visual{display:none}
+  .solutions .section-cta{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .solution-panel-cta,.solution-stage-cta{transition:none}
+}

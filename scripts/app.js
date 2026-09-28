@@ -133,12 +133,16 @@
     const svImage = document.getElementById('svImage');
     const svTitle = document.getElementById('svTitle');
     const svLabel = document.getElementById('svLabel');
+    const solutionCta = document.getElementById('solutionCta');
 
     function activateTab(tab, moveFocus = false) {
       tabs.forEach(item => item.setAttribute('aria-selected', String(item === tab)));
       panel.setAttribute('aria-labelledby', tab.id);
       svTitle.textContent = tab.dataset.title;
       svLabel.textContent = tab.dataset.label;
+      const stageLink = tab.closest('.solution-stage').querySelector('.solution-stage-cta');
+      solutionCta.textContent = stageLink.textContent;
+      solutionCta.href = stageLink.href;
       svImage.classList.add('is-changing');
       svImage.src = tab.dataset.src;
       svImage.alt = tab.dataset.alt;
@@ -164,6 +168,15 @@
         activateTab(tabs[next], true);
       });
     });
+
+    if (canObserve) {
+      const stageObserver = new IntersectionObserver(entries => {
+        if (matchMedia('(max-width:820px)').matches) return;
+        const visible = entries.filter(entry => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) activateTab(visible.target.querySelector('.solution-row'));
+      }, { rootMargin: '-25% 0px -35% 0px', threshold: [0, .25, .5, .75] });
+      document.querySelectorAll('.solution-stage').forEach(stage => stageObserver.observe(stage));
+    }
 
     const box = document.getElementById('compareBox');
     const after = document.getElementById('surfaceAfter');
