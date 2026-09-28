@@ -25,6 +25,7 @@ body{background:var(--paper)}
 .hero-signature{max-width:270px;letter-spacing:.2em}
 .hero-subbrand{font-size:clamp(11px,1.05vw,16px);letter-spacing:.16em;font-weight:600}
 .hero-image img{object-position:center 65%;filter:saturate(.81) contrast(1.08) brightness(.94)}
+.hero-field{display:none}
 .hero-image:after{background:linear-gradient(180deg,rgba(3,25,13,.13),transparent 42%,rgba(3,25,13,.43))}
 .hero-photo-note{font-weight:600;letter-spacing:.17em}
 .hero-statement{font-family:Georgia,"Times New Roman",serif;font-size:clamp(20px,1.8vw,28px);line-height:1.28;color:var(--green)}
