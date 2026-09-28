@@ -115,7 +115,7 @@
         });
       }, { threshold: .28, rootMargin: '0px 0px -8% 0px' });
       const title = document.getElementById('introTitle');
-      introObserver.observe(title);
+      if (title) introObserver.observe(title);
     }
 
     const manifestoWords = [...document.querySelectorAll('.manifesto-word')];
